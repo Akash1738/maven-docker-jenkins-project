@@ -1,0 +1,8 @@
+---
+- hosts: web
+  become: yes
+
+  tasks:
+
+  - name: run docker container
+    shell: docker run -d -p 8000:8080 maven-web-app
